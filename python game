@@ -1,0 +1,53 @@
+import time
+import random
+print("Welcome to Skyguy's Adventure!")
+name=input("Please Enter Your Name: ")
+print(f"Hello, {name}")
+n=None
+y=None
+instructions=input("Would you like to know how to play? y/n\n")
+if instructions==y:
+        print("To start off you are given a Sword and a Sheild, you will also have 100hp\n",
+          "You will be put in situations that you will have two options to choose from \n",
+          "in order to live or escape.")
+        input("Press Enter To Begin")
+else:
+    input("Press Enter To Begin")
+print("You open your eyes and you are in a very dim room and you are chained to the wall.")
+input("Press Enter\n")
+print("Would you like to try to get someones attention? (1)")
+print("Or")
+print("Would you like to look around some more? (2)")
+op1a=input("Choose (1) or (2)\n")
+event1aR=None
+if op1a==1:
+    print("You screamed as loud as you could!")
+    time.sleep(1)
+    event1a=random.randint(0,1)
+    if event1a==0:
+        print(f"You heard a man yell \"Be quiet {name}!\".")
+        event1aR=1
+    else:
+        print("Nothong Happened.")
+        event1aR=2
+elif op1a==2:
+    print("You looked around and saw what looked to be a rock in the corner of the room.")
+    time.sleep(1)
+    print("You can't move to the rock because you are chained to the wall.")
+    print("Your only option is to yell.")
+    time.sleep(2)
+    print("You screamed as loud as you could!")
+    time.sleep(1)
+    event1a=random.randint(0,1)
+    if event1a==0:
+        print(f"You heard a man yell \"Be quiet {name}!\".")
+        event1aR=1
+    else:
+        print("Nothong Happened.")
+        event1aR=2
+else:
+    time.sleep(0)
+time.sleep(1)
+if event1aR==1:
+    print("You talk to the man to try to find out what is going on.")
+    print("He said \"blah blah\"")
